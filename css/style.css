@@ -1,0 +1,63 @@
+.noneDecoration
+{
+    list-style: none;
+}
+
+body {
+  margin: 0;
+}
+#buttonList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#buttonList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  align-items: center;
+  background-color: #9DC183;
+  border-bottom: 1px solid #043927;
+}
+#resultList {
+  width: 100vw;
+  height: 80vh;
+  /* Change the color */
+  background-color: #F8F8F0;
+  overflow: scroll;
+}
+
+/* ----- CONTENAIR OF BEER ----- */
+.beerInfo {
+  display: flex;
+  margin: 30px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.beerInfo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.beerName{
+  font-size: 30px;
+}
+.beerTagline {
+  font-size: 15px;
+  font-style: italic;
+}
+.beerDescription {
+  font-size: 12px;
+}
+
+.beerImg {
+  height: 56vh;
+}
