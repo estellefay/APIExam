@@ -19,5 +19,7 @@ Allez sur la branch Dev pour avoir le bon commit
 
 
 " commit 0bbf2c8e78f781a6490b4a0594e206156cc317b3
-Author: admin <admin@iMac3-3.local>
+
+
+
 Date:   Fri Apr 20 12:21:52 2018 +0200 "
