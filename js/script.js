@@ -3,6 +3,7 @@
 $(document).ready(function() {
     // Afficher la première page de bière 
     $('#a').on('click', function() {
+        $('.loading-container').removeClass('hidden');
 
         $('main').empty();
         $.get("https://api.punkapi.com/v2/beers/random", function(data) {     
@@ -45,12 +46,14 @@ $(document).ready(function() {
             containerDiv.append(containerDiv2);
             containerDiv.append(imageBeer);
             
-            $('#resultList').html(containerDiv);     
+            $('#resultList').html(containerDiv);  
+            $('.loading-container').addClass('hidden');   
         });
     });
 
 
-    $('#b').on('click', function() { 
+    $('#b').on('click', function() {
+        $('.loading-container').removeClass('hidden'); 
         $('main').empty();
         // Afficher une liste des bieres à moins de 6 degrer d'alcool 
         $.get("https://api.punkapi.com/v2/beers?abv_lt=6", function(response) { 
@@ -75,10 +78,12 @@ $(document).ready(function() {
                 };
 
                 listContainer.append(list);                        
-                $('#resultList').append(listContainer);         
+                $('#resultList').append(listContainer);
+                $('.loading-container').addClass('hidden');          
                 
             // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
             $('body').on('click', '.noneDecoration', function () {  
+                $('.loading-container').removeClass('hidden');
                 $('main').empty();  
                 $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) {
                 
@@ -117,12 +122,14 @@ $(document).ready(function() {
                 
 
                 $('#resultList').html(containerDiv);
+                $('.loading-container').addClass('hidden');
                 })            
              })
          })
      })
 
-    $('#c').on('click', function() { 
+    $('#c').on('click', function() {
+        $('.loading-container').removeClass('hidden');  
         $('main').empty();
         $.get("https://api.punkapi.com/v2/beers?abv_lt=10&abv_gt=6", function(response) { 
             let list = document.createElement('ul');
@@ -146,10 +153,12 @@ $(document).ready(function() {
                 };
 
                 listContainer.append(list);                        
-                $('#resultList').append(listContainer);         
+                $('#resultList').append(listContainer);  
+                $('.loading-container').addClass('hidden');       
                 
             // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
             $('body').on('click', '.noneDecoration', function () {  
+                $('.loading-container').removeClass('hidden'); 
                 $('main').empty();  
                 $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) {  
             
@@ -188,12 +197,14 @@ $(document).ready(function() {
             
 
             $('#resultList').html(containerDiv);
+            $('.loading-container').addClass('hidden');
          });         
         });
       });
    });
   
-    $('#d').on('click', function() { 
+    $('#d').on('click', function() {
+        $('.loading-container').removeClass('hidden'); 
         $('main').empty();
         $.get("https://api.punkapi.com/v2/beers?abv_gt=10", function(response) { 
             let list = document.createElement('ul');
@@ -216,12 +227,15 @@ $(document).ready(function() {
                 };
 
                 listContainer.append(list);                        
-                $('#resultList').append(listContainer);         
+                $('#resultList').append(listContainer);  
+                $('.loading-container').addClass('hidden'); 
+                     
                 
             // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
             $('body').on('click', '.noneDecoration', function () {  
+                $('.loading-container').removeClass('hidden'); 
                 $('main').empty();  
-                $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (response) { 
+                $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) { 
             
                     let containerDiv = document.createElement('div');
                     containerDiv.classList.add('beerInfo');
@@ -257,13 +271,14 @@ $(document).ready(function() {
                     containerDiv.append(imageBeer);
                     
 
-                    $('#resultList').append(containerDiv);
-                    $('#resultList').append(containerDiv);
+                    $('#resultList').html(containerDiv);
+                    $('.loading-container').addClass('hidden');
         });         
       });
     });
 });
   $('#e').on('click', function() { 
+    $('.loading-container').removeClass('hidden'); 
     $('main').empty();
     // Afficher une liste des bieres à moins de 6 degrer d'alcool 
     $.get("https://api.punkapi.com/v2/beers?ebc_lt=8", function(response) { 
@@ -287,10 +302,12 @@ $(document).ready(function() {
             };
 
             listContainer.append(list);                        
-            $('#resultList').append(listContainer);         
+            $('#resultList').append(listContainer);
+            $('.loading-container').addClass('hidden');         
             
         // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
         $('body').on('click', '.noneDecoration', function () {  
+            $('.loading-container').removeClass('hidden'); 
             $('main').empty();  
             $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) {
             
@@ -331,12 +348,14 @@ $(document).ready(function() {
             
 
             $('#resultList').html(containerDiv);
+            $('.loading-container').addClass('hidden');
             })            
          })
      })
  })
 
 $('#f').on('click', function() { 
+    $('.loading-container').removeClass('hidden'); 
     $('main').empty();
     $.get("https://api.punkapi.com/v2/beers?ebc_lt=20&ebc_gt=8", function(response) { 
         let list = document.createElement('ul');
@@ -360,10 +379,12 @@ $('#f').on('click', function() {
             };
 
             listContainer.append(list);                        
-            $('#resultList').append(listContainer);         
+            $('#resultList').append(listContainer); 
+            $('.loading-container').addClass('hidden');        
             
         // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
         $('body').on('click', '.noneDecoration', function () {  
+            $('.loading-container').removeClass('hidden'); 
             $('main').empty();  
             $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) {
             
@@ -402,12 +423,14 @@ $('#f').on('click', function() {
             
 
             $('#resultList').html(containerDiv);
+            $('.loading-container').addClass('hidden');
             })            
          })
      })
  })
 
 $('#g').on('click', function() { 
+    $('.loading-container').removeClass('hidden'); 
     $('main').empty();
     $.get("https://api.punkapi.com/v2/beers?ebc_lt=45&ebc_gt=21", function(response) { 
         let list = document.createElement('ul');
@@ -430,10 +453,12 @@ $('#g').on('click', function() {
             };
 
             listContainer.append(list);                        
-            $('#resultList').append(listContainer);         
+            $('#resultList').append(listContainer); 
+            $('.loading-container').addClass('hidden');        
             
         // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
         $('body').on('click', '.noneDecoration', function () {  
+            $('.loading-container').removeClass('hidden'); 
             $('main').empty();  
             $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) { 
         
@@ -472,11 +497,13 @@ $('#g').on('click', function() {
                 containerDiv.append(imageBeer);
                 
                 $('#resultList').html(containerDiv);
+                $('.loading-container').addClass('hidden');
             });         
         });
      });
     });
     $('#h').on('click', function() { 
+        $('.loading-container').removeClass('hidden'); 
         $('main').empty();
         $.get("https://api.punkapi.com/v2/beers?ebc_lt=110&ebc_gt=45", function(response) { 
         let list = document.createElement('ul');
@@ -499,10 +526,12 @@ $('#g').on('click', function() {
             };
 
             listContainer.append(list);                        
-            $('#resultList').append(listContainer);         
+            $('#resultList').append(listContainer);  
+            $('.loading-container').addClass('hidden');       
             
         // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
         $('body').on('click', '.noneDecoration', function () {  
+            $('.loading-container').removeClass('hidden'); 
             $('main').empty();  
             $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) { 
         
@@ -541,11 +570,13 @@ $('#g').on('click', function() {
                 containerDiv.append(imageBeer);
                 
                 $('#resultList').html(containerDiv);
+                $('.loading-container').addClass('hidden');
             });         
          });
         });
     });  
     $('#i').on('click', function() { 
+        $('.loading-container').removeClass('hidden'); 
         $('main').empty();
         $.get("https://api.punkapi.com/v2/beers?ebc_gt=110", function(response) { 
         let list = document.createElement('ul');
@@ -568,10 +599,12 @@ $('#g').on('click', function() {
             };
 
             listContainer.append(list);                        
-            $('#resultList').append(listContainer);         
+            $('#resultList').append(listContainer); 
+            $('.loading-container').addClass('hidden');        
             
         // Quand on clique sur l'une des bière de la liste on afficher la bière en question  
         $('body').on('click', '.noneDecoration', function () {  
+            $('.loading-container').removeClass('hidden'); 
             $('main').empty();  
             $.get(('https://api.punkapi.com/v2/beers/' + this.dataset.id ), function (data) { 
         
@@ -610,6 +643,7 @@ $('#g').on('click', function() {
                 containerDiv.append(imageBeer);
                 
                 $('#resultList').html(containerDiv);
+                $('.loading-container').addClass('hidden');
             });         
          });
         });
