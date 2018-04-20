@@ -12,3 +12,10 @@ Le chiffre à droite de chaque bière sur les liste corresponds au Taux d'alcool
 Faite votre choix et buvez avec modération. 
 
 API https://punkapi.com/documentation/v2
+
+
+SUITE à un echec de push j'ai du push sur une nouvelle branch 
+Allez sur la branch Dev pour avoir le bon commit
+" commit 0bbf2c8e78f781a6490b4a0594e206156cc317b3
+Author: admin <admin@iMac3-3.local>
+Date:   Fri Apr 20 12:21:52 2018 +0200 "
