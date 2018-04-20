@@ -1,6 +1,8 @@
 .noneDecoration
 {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 body {
@@ -30,6 +32,23 @@ body {
   /* Change the color */
   background-color: #F8F8F0;
   overflow: scroll;
+}
+
+/* ----- STYLE DE LA LIST---- */
+.listStyle {
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.tauxAlcool
+{
+  font-size: 15px;
+  font-weight: bold;
+  color: blue;
+  list-style: none;
 }
 
 /* ----- CONTENAIR OF BEER ----- */
