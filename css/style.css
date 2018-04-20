@@ -8,23 +8,29 @@
 body {
   margin: 0;
 }
+h1 {
+  font-family: 'Tajawal', sans-serif;
+  color: #733D0E;
+  font-size: 30px;
+}
 #buttonList ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  width: 100%;
+  width: 70vw ;
+  height: 30px;
   display: flex;
   justify-content: space-around;
 }
-#buttonList {
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20vh;
+  height: 40vh;
   align-items: center;
-  background-color: #9DC183;
-  border-bottom: 1px solid #043927;
+  background-color: #F2C53D;
+  border-bottom: 1px solid #733D0E;
 }
 #resultList {
   width: 100vw;
@@ -34,6 +40,25 @@ body {
   overflow: scroll;
 }
 
+/* -- MES BUTTONS --*/
+
+.button {
+  background-color: white; 
+  border: none;
+  color: #F2C53D;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #BF700F; /* Green */
+  color: #F2C53D;
+}
 /* ----- STYLE DE LA LIST---- */
 .listStyle {
   text-align: center;
@@ -47,7 +72,7 @@ body {
 {
   font-size: 15px;
   font-weight: bold;
-  color: blue;
+  color: #F2C53D;
   list-style: none;
 }
 
